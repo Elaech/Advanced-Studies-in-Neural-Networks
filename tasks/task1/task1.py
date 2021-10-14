@@ -104,7 +104,7 @@ def test_model(model, nr_of_tests, batch_size):
         test_scores[index] = fitness(predictions, labels)
 
     print(f"On average from {nr_of_tests} tests,",
-          f" the model correctly classifies {format_percentage(np.average(test_scores), 100)}")
+          f" the model correctly classifies {format_percentage(np.average(test_scores), batch_size)}")
 
 
 def plot_training_result(model, features, batch_size):
@@ -121,18 +121,17 @@ def plot_training_result(model, features, batch_size):
 
 
 def main():
-    TRAIN = True
+    TRAIN = False
     PLOT = True
-    BATCH_SIZE = 100
+    BATCH_SIZE = 1000
     TESTS = 100
     VICINITY_SIZE = 12
     VICINITY_START_POINT = 10e+5
 
     model_path = Path("task1_model.json")
 
-    model = init_model()
-
     if TRAIN:
+        model = init_model()
         features, labels = generate_data_batch(BATCH_SIZE)
         vicinity = get_vicinity(VICINITY_SIZE, VICINITY_START_POINT)
         print(f"The vicinity is \n{vicinity}")
@@ -141,7 +140,7 @@ def main():
         if PLOT:
             plot_training_result(model, features, BATCH_SIZE)
     else:
-        load_model(model_path)
+        model = load_model(model_path)
         test_model(model, nr_of_tests=TESTS, batch_size=BATCH_SIZE)
 
 
