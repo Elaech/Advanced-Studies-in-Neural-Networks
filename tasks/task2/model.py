@@ -1,6 +1,6 @@
 import numpy as np
 
-PATH = "task2_model"
+PATH = "task2_model_test"
 
 
 def init_model(input_count, output_count):

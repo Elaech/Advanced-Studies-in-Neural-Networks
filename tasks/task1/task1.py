@@ -121,7 +121,7 @@ def plot_training_result(model, features, batch_size):
 
 
 def main():
-    TRAIN = False
+    TRAIN = True
     PLOT = True
     BATCH_SIZE = 1000
     TESTS = 100

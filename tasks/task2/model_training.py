@@ -5,7 +5,7 @@ from tasks.task2.model import save_model
 
 class Params:
     BATCH_SIZE = 64
-    EPOCHS = 1000
+    EPOCHS = 100
     LEARNING_RATE = 0.01
     LABEL_COUNT = 10
     INPUT_SIZE = 784

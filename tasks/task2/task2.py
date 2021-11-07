@@ -4,7 +4,7 @@ from tasks.task2.model_training import train_model, Params, test_model
 
 
 def main():
-    TRAIN = False
+    TRAIN = True
 
     if TRAIN:
         data = data_preprocess.get_train_data()
