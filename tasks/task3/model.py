@@ -1,6 +1,7 @@
 import numpy as np
 
 PATH = "task3_model_test"
+# PATH = "task3_model_test1"
 
 
 def init_model(input_count, hidden_layers, output_count):

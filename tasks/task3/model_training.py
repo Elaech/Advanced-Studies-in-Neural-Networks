@@ -23,7 +23,7 @@ def switch_dropout(value: bool) -> bool:
 class Params:
     BATCH_SIZE = 64
     EPOCHS = 100
-    LEARNING_RATE = 0.01
+    LEARNING_RATE = 0.005
     LEARNING_RATE_DECAY = 0.9
     ITERATION_CHECK = 20
     ITERATION_CHECK_DECAY = 1
